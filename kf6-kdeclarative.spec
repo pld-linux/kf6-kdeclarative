@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.5
+%define		kdeframever	6.6
 %define		qtver		5.15.2
 %define		kfname		kdeclarative
 
 Summary:	Integration of QML and KDE work spaces
 Name:		kf6-%{kfname}
-Version:	6.5.0
+Version:	6.6.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	7ef47616f65781126b29f3ff7c6637d4
+# Source0-md5:	852d383bb4468a8254aaf0512b49db42
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
