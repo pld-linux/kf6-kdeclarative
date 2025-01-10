@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.9
+%define		kdeframever	6.10
 %define		qtver		5.15.2
 %define		kfname		kdeclarative
 
 Summary:	Integration of QML and KDE work spaces
 Name:		kf6-%{kfname}
-Version:	6.9.0
+Version:	6.10.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	99771d46badb6e049402464d6123877e
+# Source0-md5:	95c4c4a1946ec9f135ff82fa8d4fb42a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -138,6 +138,13 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/qml/org/kde/private/kquickcontrols
 %attr(755,root,root) %{_libdir}/qt6/qml/org/kde/private/kquickcontrols/libkquickcontrolsprivateplugin.so
 %{_libdir}/qt6/qml/org/kde/private/kquickcontrols/qmldir
+%ghost %{_libdir}/libkquickcontrolsprivate.so.0
+%attr(755,root,root) %{_libdir}/libkquickcontrolsprivate.so.*.*
+%{_libdir}/qt6/qml/org/kde/kquickcontrols/kde-qmlmodule.version
+%{_libdir}/qt6/qml/org/kde/kquickcontrols/kquickcontrols.qmltypes
+%{_libdir}/qt6/qml/org/kde/kquickcontrols/libkquickcontrols.so
+%{_libdir}/qt6/qml/org/kde/private/kquickcontrols/kde-qmlmodule.version
+%{_libdir}/qt6/qml/org/kde/private/kquickcontrols/kquickcontrolsprivate.qmltypes
 
 
 %files devel
