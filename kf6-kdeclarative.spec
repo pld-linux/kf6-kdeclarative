@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		kdeclarative
 
 Summary:	Integration of QML and KDE work spaces
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a5059cbf4157cfc8ee6b3d9632ed340e
+# Source0-md5:	e30aab56e5bf8eaa84780ba1e809e755
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
@@ -114,18 +114,18 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKF6CalendarEvents.so.6
-%attr(755,root,root) %{_libdir}/libKF6CalendarEvents.so.*.*
+%{_libdir}/libKF6CalendarEvents.so.*.*
 %dir %{_libdir}/qt6/qml/org/kde/draganddrop
 %{_libdir}/qt6/qml/org/kde/draganddrop/draganddropplugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/draganddrop/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/draganddrop/libdraganddropplugin.so
+%{_libdir}/qt6/qml/org/kde/draganddrop/libdraganddropplugin.so
 %{_libdir}/qt6/qml/org/kde/draganddrop/qmldir
 %dir %{_libdir}/qt6/qml/org/kde/graphicaleffects
 %{_libdir}/qt6/qml/org/kde/graphicaleffects/BadgeEffect.qml
 %{_libdir}/qt6/qml/org/kde/graphicaleffects/Lanczos.qml
 %{_libdir}/qt6/qml/org/kde/graphicaleffects/graphicaleffects.qmltypes
 %{_libdir}/qt6/qml/org/kde/graphicaleffects/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/graphicaleffects/libgraphicaleffects.so
+%{_libdir}/qt6/qml/org/kde/graphicaleffects/libgraphicaleffects.so
 %{_libdir}/qt6/qml/org/kde/graphicaleffects/qmldir
 %dir %{_libdir}/qt6/qml/org/kde/kquickcontrols
 %{_libdir}/qt6/qml/org/kde/kquickcontrols/ColorButton.qml
@@ -134,13 +134,13 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/qml/org/kde/kquickcontrolsaddons
 %{_libdir}/qt6/qml/org/kde/kquickcontrolsaddons/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kquickcontrolsaddons/kquickcontrolsaddonsplugin.qmltypes
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kquickcontrolsaddons/libkquickcontrolsaddonsplugin.so
+%{_libdir}/qt6/qml/org/kde/kquickcontrolsaddons/libkquickcontrolsaddonsplugin.so
 %{_libdir}/qt6/qml/org/kde/kquickcontrolsaddons/qmldir
 %dir %{_libdir}/qt6/qml/org/kde/private/kquickcontrols
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/private/kquickcontrols/libkquickcontrolsprivateplugin.so
+%{_libdir}/qt6/qml/org/kde/private/kquickcontrols/libkquickcontrolsprivateplugin.so
 %{_libdir}/qt6/qml/org/kde/private/kquickcontrols/qmldir
 %ghost %{_libdir}/libkquickcontrolsprivate.so.0
-%attr(755,root,root) %{_libdir}/libkquickcontrolsprivate.so.*.*
+%{_libdir}/libkquickcontrolsprivate.so.*.*
 %{_libdir}/qt6/qml/org/kde/kquickcontrols/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kquickcontrols/kquickcontrols.qmltypes
 %{_libdir}/qt6/qml/org/kde/kquickcontrols/libkquickcontrols.so
