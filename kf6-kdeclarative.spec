@@ -67,6 +67,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KDeclarative provides integration of QML and KDE work spaces.
 
+%description -l pl.UTF-8
+KDeclarative zapewnia integrację QML i obszarów roboczych KDE.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
